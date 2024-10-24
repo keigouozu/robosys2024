@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Ryuichi Ueda <keigo0918enjoy@gmail.com>
+
 import sys
 
 ans = 0
