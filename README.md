@@ -1,8 +1,5 @@
-# robosys2024
-ロボットシステム学授業用
-
 # plusコマンド
-![test](https://github.com/keigouozu/robosys2024/actions/workflows/test.yml/badge.svg)
+![test]([![test](https://github.com/keigouozu/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/keigouozu/robosys2024/actions/workflows/test.yml))
 
 ## 必要なソフトウェア
 - Python
