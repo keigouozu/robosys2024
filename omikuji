@@ -4,14 +4,26 @@
 
 import random
 
-#おみくじの中身
+# おみくじの中身
 omikuji = ['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶']
 
-#おみくじを選ぶ関数
+# おみくじを選ぶ関数
 def get_unsei():
     return random.choice(omikuji)
 
+def main():
+    while True:
+        # おみくじを引くかどうか尋ねる
+        user_input = input("今日の運勢を占いますか？　(y/n): ")
+        
+        if user_input.lower() == 'y':  # "y"ならおみくじを引く
+            unsei = get_unsei()
+            print("あなたの運勢は:", unsei)
+        elif user_input.lower() == 'n':  # "n"なら終了
+            print("おみくじを終了します。")
+            break
+        else:
+            print("無効な入力です。'y' か 'n' を入力してください。")
 
-unsei = get_unsei()
-
-print("あなたの運勢は:", unsei)
+if __name__ == '__main__':
+    main()
