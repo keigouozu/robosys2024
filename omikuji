@@ -16,10 +16,10 @@ def main():
         # おみくじを引くかどうか尋ねる
         user_input = input("今日の運勢を占いますか？　(y/n): ")
         
-        if user_input.lower() == 'y':  # "y"ならおみくじを引く
+        if user_input.lower() == 'y':  
             unsei = get_unsei()
             print("あなたの運勢は:", unsei)
-        elif user_input.lower() == 'n':  # "n"なら終了
+        elif user_input.lower() == 'n':  
             print("おみくじを終了します。")
             break
         else:
