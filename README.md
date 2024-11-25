@@ -1,4 +1,4 @@
-# OMIKUJIコマンド
+# omikujiコマンド
 [![test](https://github.com/keigouozu/robosys2024/actions/workflows/test_omikuji.yml/badge.svg)](https://github.com/keigouozu/robosys2024/actions/workflows/test_omikuji.yml)
 
 ## 概要
@@ -38,8 +38,8 @@ chmod +x omikuji
   - テスト済みバージョン: 3.7～3.11
 
 ## テスト環境
-- ubuntu 22.04 LST
-
+- **os**: Ubuntu 24.04 LTS
+- **シェル**: Bash 5.1.16
 ## ライセンス
 BSD-3-Clause
 
