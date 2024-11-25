@@ -2,27 +2,29 @@
 # SPDX-FileCopyrightText: 2024 Keigo Uozu
 # SPDX-License-Identifier: BSD-3-Clause
 
-# 実行するPythonコードのパス
-PYTHON_SCRIPT="omikuji"
-
-# 実行する回数
-TEST_ITERATIONS=20
-
-# おみくじの中身
-EXPECTED=("大吉" "吉" "中吉" "小吉" "末吉" "凶" "大凶")
-
-echo "テスト開始: ${PYTHON_SCRIPT}"
-
-for i in $(seq 1 $TEST_ITERATIONS); do
-
-    OUTPUT=$(python3 $PYTHON_SCRIPT | grep "あなたの運勢は:" | awk -F": " '{print $2}')
-    
-    if [[ " ${EXPECTED[@]} " =~ " ${OUTPUT} " ]]; then
-        echo "${i}回目: 成功 (結果: ${OUTPUT})"
+function check_output {
+    expected="$1"
+    actual="$2"
+    if [[ "$actual" == *"$expected"* ]]; then
+        echo "PASS: Found '$expected'"
     else
-        echo "${i}回目: 失敗 (結果: ${OUTPUT})"
-        exit 1  
+        echo "FAIL: Expected '$expected', but got '$actual'"
+        exit 1
     fi
-done
+}
 
-echo "すべてのテストが完了しました"
+SCRIPT="./omikuji"
+
+# テストケース1: 正常におみくじを引く
+output=$(echo -e "y\nn" | python3 $SCRIPT)
+check_output "あなたの運勢は:" "$output"
+
+# テストケース2: 無効な入力をテスト
+output=$(echo -e "x\ny\nn" | python3 $SCRIPT)
+check_output "無効な入力です" "$output"
+
+# テストケース3: 終了確認
+output=$(echo -e "n" | python3 $SCRIPT)
+check_output "おみくじを終了します。" "$output"
+
+echo "すべてのテストが成功しました。"
