@@ -14,10 +14,13 @@ git clone git@github.com:keigouozu/robosys2024.git
 ```bash
 cd robosys2024 
 ```
-実行
+実行権限を付与
 ```bash
 chmod +x omikuji
-./OMIKUJI
+```
+実行
+```bash
+./omikuji
 ```
 出力例
 ```bash
