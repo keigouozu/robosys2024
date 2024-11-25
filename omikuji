@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Keigo Uozu
+# SPDX-License-Identifier: BSD-3-Clause
+
+import random
+
+#おみくじの中身
+omikuji = ['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶']
+
+#おみくじを選ぶ関数
+def get_unsei():
+    return random.choice(omikuji)
+
+
+unsei = get_unsei()
+
+print("あなたの運勢は:", unsei)
