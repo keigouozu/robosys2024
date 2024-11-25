@@ -1,5 +1,5 @@
 # OMIKUJIコマンド
-![test][![test](https://github.com/keigouozu/robosys2024/actions/workflows/omikuji_test.yml/badge.svg)](https://github.com/keigouozu/robosys2024/actions/workflows/omikuji_test.yml)
+[![test](https://github.com/keigouozu/robosys2024/actions/workflows/test_omikuji.yml/badge.svg)](https://github.com/keigouozu/robosys2024/actions/workflows/test_omikuji.yml)
 
 ## 概要
 - おみくじのシュミレーションができるコマンドです
