@@ -35,7 +35,7 @@ chmod +x omikuji
 ## 実行環境
 - Python: バージョン3.7以降
   - テスト済みバージョン: 3.7～3.11
-- **os**: Ubuntu 24.04 LTS
+- **os**: Ubuntu 22.04 LTS以降
 - **Shell**: Bash バージョン5.0以降
 
 ## ライセンス
